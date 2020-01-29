@@ -5,7 +5,7 @@ import TeamMembers from './Components/TeamMembers';
 
 
 function App() {
-  const [teamMember, newTeamMember] = useState([
+  const [teamMember, setTeamMember] = useState([
     {
       id: 1,
       first_name: 'Miley' ,
