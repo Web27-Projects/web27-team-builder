@@ -22,14 +22,29 @@ function App() {
     }
   ]);
 
- 
+  const addTeamMember = e => {
+    const newTeamMember = {
+      id: Date.now(),
+      first_name: e.first_name,
+      last_name: e.last_name ,
+      email: e.email,
+      github: e.github
+    };
+    setTeamMember([...teamMember, newTeamMember])
+  };
+
+  const delTeamMember = id => {
+    const newArray = teamMember.filter(info => {
+      return info.id !== id
+    })
+    setTeamMember(newArray)
+  }
 
   return (
     <div className="App">
       <div classNAme = 'container'>
-      Hello
-      <Form />
-      <TeamMembers />
+      <Form addTeamMember = {addTeamMember} />
+      <TeamMembers MemberList = {teamMember} deleteMember = {delTeamMember} />
       </div>
     </div>
   );
