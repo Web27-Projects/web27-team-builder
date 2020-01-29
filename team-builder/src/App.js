@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <div classNAme = 'container'>
+      <div className = 'container'>
       <Form addTeamMember = {addTeamMember} />
       <TeamMembers MemberList = {teamMember} deleteMember = {delTeamMember} />
       </div>
