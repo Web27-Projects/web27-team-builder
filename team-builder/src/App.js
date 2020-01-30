@@ -29,9 +29,9 @@ function App() {
       last_name: e.last_name ,
       email: e.email,
       github: e.github
-    };
+    }
     setTeamMember([...teamMember, newTeamMember])
-  };
+  }
 
   const delTeamMember = id => {
     const newArray = teamMember.filter(info => {
